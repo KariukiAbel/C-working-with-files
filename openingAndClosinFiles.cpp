@@ -7,7 +7,10 @@ int main(int argc, char const *argv[]) {
   //creating a fstream object
   fstream myFileHandler;
   myFileHandler.open("test.txt");
-  myFileHandler<<"This is a sample text";
-  myFileHandler.close();
+  if(myFileHandler.is_open()){
+    std::cout << "The file has been opened properly" << '\n';
+      myFileHandler<<"This is a sample text";
+      myFileHandler.close();
+    }
   return 0;
 }
