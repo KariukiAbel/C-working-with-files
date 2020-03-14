@@ -3,7 +3,9 @@
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-  fstream file;
+  //fstream file;
+  //using the constructor to cteate and open a file
+fstream file ("sample.txt", ios::out | ios::in);
   // fstream default mode (flags) is
   // input output stream aka ios::in | ios::out
   //ios::in stands for INPUT used for reading
@@ -11,7 +13,7 @@ int main(int argc, char const *argv[]) {
 
   // file.open("sample.txt", ios::out | ios::ate |ios::in);
   //The line below creates and opens a new file called sample.txt
-    file.open("sample.txt", ios::out);
+    // file.open("sample.txt", ios::out | ios::in);
   if (file.is_open()) {
   }else{
     std::cout << "File was not opened properly!" << '\n';
