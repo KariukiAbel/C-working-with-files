@@ -9,7 +9,9 @@ int main(int argc, char const *argv[]) {
   //ios::in stands for INPUT used for reading
   //ios::out stands for OUTPUT used for writing
 
-  file.open("sample.txt", ios::out | ios::ate |ios::in);
+  // file.open("sample.txt", ios::out | ios::ate |ios::in);
+  //The line below creates and opens a new file called sample.txt
+    file.open("sample.txt", ios::out);
   if (file.is_open()) {
   }else{
     std::cout << "File was not opened properly!" << '\n';
